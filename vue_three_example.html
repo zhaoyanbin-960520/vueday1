@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="app">
+    {{msg + 12}}
+    <hr>
+    {{msg.toUpperCase()}}
+    <hr>
+    {{num/2}}
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            msg: 'hello',
+            num: 10,
+
+        },
+    })
+</script>
+
+</body>
+</html>
