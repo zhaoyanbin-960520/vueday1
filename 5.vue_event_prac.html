@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="app">
+    <h3>年龄：{{age}}</h3>
+    事件绑定v-on：<input type="button" value="点击减少" v-on:click="change_age">
+    <hr>
+    简化版@：<input type="button" value="点击增加" @click="add_age">
+    <hr>
+    <h3>数值：{{num}}</h3>
+    传递参数：<input type="button" value="传递参数" @click="change_num(80,'小黑')">
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            age: 70,
+            num:50
+        },
+        methods: {
+
+            //标准写法
+            change_age: function () {
+                this.age--;
+
+            },
+            //简化写法
+            add_age() {
+                this.age++;
+            },
+            change_num(number,name){
+                //this.num=number
+                this.num=name
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
