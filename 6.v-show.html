@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="app">
+    <!--  用来控制标签是否展示 true false  -->
+    <h3 v-show="true">{{msg}}</h3>
+    <h3 v-show="isShow">我喜欢vue</h3>
+    <input type="button" value="点我显示" @click="change_show">
+    <hr>
+    <h2 v-show="count>20">你老了</h2>
+    <input type="button" value="点击" @click="change_count">
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            msg: '上课一定要认真听讲',
+            isShow: false,
+            count: 23,
+        },
+        methods: {
+            change_show() {
+                this.isShow = !this.isShow
+            },
+            change_count() {
+                this.count--;
+        },
+
+        }
+    })
+</script>
+
+</body>
+</html>
