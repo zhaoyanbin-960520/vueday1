@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="app">
+    <h3>{{name}}</h3>
+    <h3>年龄：{{age + 1}}</h3>
+    <h3>用户名：{{user.name}},密码：{{user.pwd}}</h3>
+    <h3>{{arr[0]}}</h3>
+    <h3>{{user_list[2].name}}</h3>
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            //字符串
+            name: "百知教育",
+            //数字
+            age: 24,
+            //对象
+            user: {name: '小黑', pwd: '123456'},
+            //数组
+            arr:['北京','天津','上海'],
+            user_list:[{name: '小黑', pwd: '123456'},
+                       {name: '小百', pwd: '123456'},
+                       {name: '小惠', pwd: '123456'}]
+
+
+
+        },
+    })
+</script>
+
+</body>
+</html>
