@@ -7,14 +7,20 @@
 </head>
 <body>
 <div id="app">
+    <!--  v-model只能在表单中使用  -->
+    <input type="text" v-model="msg">
+    <hr>
+    <span>{{msg}}</span>
 
 </div>
 
 <script src="js/vue.min.js"></script>
 <script>
     new Vue({
-        el:"#app",
-        data:{},
+        el: "#app",
+        data: {
+            msg:'',
+        },
     })
 </script>
 
