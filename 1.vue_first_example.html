@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue的第一个实例</title>
+</head>
+<body>
+{{msg}}<hr>
+<div id="app">
+    <h3>{{msg}}</h3>
+    <h3>{{username}}</h3>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            msg:"hello vue",
+            username:'python2009',
+        }
+    })
+</script>
+
+</body>
+</html>
